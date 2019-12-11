@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data</title>
+    <style>
+        table{
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th{
+            border: 1px solid #dddddd;
+            text-align: center;
+        }
+        tr:nth-child(even){
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>date</th>
+            <th>trans</th>
+            <th>symbol</th>
+            <th>qty</th>
+            <th>price</th>
+        </tr>
+        {% for row in data %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
